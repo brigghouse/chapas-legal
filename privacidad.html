@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad · Chapas</title>
+<meta name="description" content="Qué guarda Chapas, dónde, por qué y cómo borrarlo.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<main>
+  <p class="idiomas"><b>Español</b> · <a href="en/privacy.html">English</a></p>
+  <div class="chapa">🍺</div>
+  <h1>Privacidad</h1>
+  <p class="fecha">Chapas · última actualización: 24 de octubre de 2026</p>
+
+  <div class="caja">
+    <h3>El resumen, en cuatro líneas</h3>
+    <p class="flojo">
+      Chapas funciona sin cuenta, y sin cuenta no sale nada del móvil. Si creas
+      una cuenta, se guardan tu correo, tu álbum y tus fotos, y nada más. No hay
+      anuncios, no hay analítica, no hay rastreadores y no vendemos nada a nadie.
+      Las fotos se limpian antes de subirse: el GPS que mete el móvil se queda fuera.
+    </p>
+  </div>
+
+  <h2>Quién responde de esto</h2>
+  <p>
+    Chapas es un proyecto personal, no una empresa. El responsable del
+    tratamiento es la persona que publica la app, y la vía de contacto para
+    cualquier cosa de privacidad es
+    <a href="mailto:ianbrighouse4@gmail.com">ianbrighouse4@gmail.com</a>.
+  </p>
+
+  <h2>Sin cuenta no hay tratamiento</h2>
+  <p>
+    El álbum completo —pegar chapas, las colecciones, las insignias, las
+    rondas— funciona sin entrar. En ese modo todo vive en el almacenamiento
+    del propio móvil y no se envía a ningún servidor. Si desinstalas la app,
+    desaparece. Esa es también la razón de que entrar sea opcional y no un paso
+    obligatorio al abrirla.
+  </p>
+
+  <h2>Qué se guarda si creas una cuenta</h2>
+  <p>La cuenta sirve para dos cosas: recuperar el álbum si cambias de móvil y compartir rondas. Para eso se guarda:</p>
+  <table>
+    <thead><tr><th>Dato</th><th>De dónde sale</th><th>Para qué</th></tr></thead><tbody>
+    <tr>
+      <td>Correo electrónico</td>
+      <td data-de="De dónde sale">Tú, o Apple o Google al entrar</td>
+      <td data-de="Para qué">Identificar la cuenta. Si usas <i>Sign in with Apple</i> y eliges ocultar el correo, lo que llega es la dirección de reenvío de Apple y nunca la tuya.</td>
+    </tr>
+    <tr>
+      <td>Tu álbum: cervezas, veces que las apuntaste, notas, retos y rondas</td>
+      <td data-de="De dónde sale">Lo que escribes en la app</td>
+      <td data-de="Para qué">Copia de seguridad y sincronización entre tus aparatos.</td>
+    </tr>
+    <tr>
+      <td>Fotos de las chapas</td>
+      <td data-de="De dónde sale">La cámara, si decides hacer la foto</td>
+      <td data-de="Para qué">Que el cromo salga con su foto. Se re&#8209;codifican en el móvil antes de subirse, lo que elimina los metadatos EXIF, el GPS incluido.</td>
+    </tr>
+    <tr>
+      <td>Fechas de creación y modificación de cada fila</td>
+      <td data-de="De dónde sale">La propia app</td>
+      <td data-de="Para qué">Saber qué cambió desde la última sincronización. Sin esto no hay sincronización posible.</td>
+    </tr>
+  </tbody></table>
+
+  <h3>Qué no se guarda, aunque podría</h3>
+  <ul>
+    <li><b>Tu posición.</b> La app no pide permiso de ubicación y no lo tiene. Y como las fotos se re&#8209;codifican, tampoco llega por la puerta de atrás.</li>
+    <li><b>Los nombres de tus amigos.</b> Cuando regalas una repetida y escribes un nombre, ese nombre se queda en tu móvil y no se sube. Es un dato de otra persona que no te ha dado permiso.</li>
+    <li><b>Analítica, perfiles o publicidad.</b> No hay SDK de nadie midiendo qué tocas. No hay identificador de publicidad.</li>
+    <li><b>Tu fecha de nacimiento.</b> La app está clasificada para mayores de edad y al abrirla por primera vez te pregunta si lo eres. Se guarda la respuesta y la fecha en que la diste, en tu móvil. Nada más: con eso basta y es un dato personal menos.</li>
+    <li><b>Contraseñas.</b> No hay. Se entra con Apple, con Google o con un enlace al correo.</li>
+  </ul>
+
+  <h3>Permisos que pide la app</h3>
+  <ul>
+    <li><b>Cámara</b>: solo mientras fotografías una chapa o lees un código de barras. No se graba vídeo ni se envía nada sin que pegues el cromo.</li>
+    <li><b>Sensores de movimiento</b>: para que la chapa se incline contigo en la ficha del cromo. Esa lectura se usa en pantalla y se tira; no se guarda ni se envía.</li>
+    <li><b>Vibración</b>: el pequeño golpe al pegar un cromo.</li>
+  </ul>
+
+  <h2>Base legal</h2>
+  <ul>
+    <li><b>Ejecutar lo que pides</b> (art. 6.1.b RGPD): guardar tu álbum y tus fotos es el servicio que pediste al crear la cuenta. Sin cuenta, no hay tratamiento que justificar.</li>
+    <li><b>Obligación legal</b> (art. 6.1.c): la declaración de mayoría de edad existe porque las tiendas y la normativa de contenidos sobre alcohol lo exigen.</li>
+  </ul>
+
+  <h2>Quién más lo toca</h2>
+  <p>
+    Un solo proveedor: <b>Supabase</b>, que aloja la base de datos, el registro
+    de usuarios y las fotos, en servidores de la Unión Europea. Actúa como
+    encargado del tratamiento y no usa estos datos para nada propio. Si entras
+    con Apple o con Google, esa empresa sabe que has entrado en Chapas, igual
+    que cuando usas su botón en cualquier otra app; lo que nos devuelven es un
+    identificador y un correo.
+  </p>
+  <p>No hay nadie más. No se ceden datos a terceros ni se venden.</p>
+
+  <h2>Cuánto tiempo</h2>
+  <p>
+    Mientras tengas la cuenta. Cuando la borras, las filas y las fotos se
+    borran en ese momento, no «en un plazo de X días». Las copias de seguridad
+    del proveedor rotan y expiran solas en 30 días como máximo.
+  </p>
+
+  <h2>Tus derechos, y dónde está el botón</h2>
+  <p>
+    El RGPD te da derecho de acceso, portabilidad, rectificación, supresión,
+    limitación y oposición. Los dos que se ejercen en un toque están dentro de
+    la app, en la pestaña <b>Cuenta</b>:
+  </p>
+  <ul>
+    <li><b>Llevarme mis datos</b> — te da un fichero JSON con todo, listo para compartir o guardar (acceso y portabilidad, arts. 15 y 20).</li>
+    <li><b>Borrar la cuenta</b> — borra cuenta, álbum y fotos, sin pasar por nadie (supresión, art. 17).</li>
+  </ul>
+  <p>
+    Si prefieres pedirlo desde fuera de la app, está la
+    <a href="borrar-cuenta.html">página de borrado</a>. Para rectificar,
+    limitar u oponerte, escribe a
+    <a href="mailto:ianbrighouse4@gmail.com">ianbrighouse4@gmail.com</a>; la respuesta llega
+    dentro del mes que marca el reglamento. Y si crees que no lo hemos hecho
+    bien, puedes reclamar ante la
+    <a href="https://www.aepd.es" rel="noreferrer">Agencia Española de Protección de Datos</a>.
+  </p>
+
+  <h2>Menores</h2>
+  <p>
+    Chapas es una app sobre cerveza y está clasificada para mayores de edad
+    (18+ en App Store y el equivalente en Google Play). No está dirigida a
+    menores y no se les debe permitir usarla.
+  </p>
+
+  <h2>Cambios</h2>
+  <p>
+    Si esto cambia, cambia la fecha de arriba y el aviso aparece en la app antes
+    de que el cambio afecte a nada que ya tengas guardado.
+  </p>
+
+  <footer>
+    Chapas · <a href="borrar-cuenta.html">Borrar la cuenta</a> ·
+    <a href="mailto:ianbrighouse4@gmail.com">ianbrighouse4@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
