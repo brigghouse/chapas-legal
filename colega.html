@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Añádeme en Chapas</title>
+<meta name="description" content="Un colega te invita a Chapas, el álbum de cromos de la cerveza. Con su código veréis qué os estáis tomando.">
+<link rel="stylesheet" href="estilo.css">
+<style>
+  .codigo { font: 700 44px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: 6px; margin: 10px 0 4px; }
+  .pasos li { margin: 10px 0; }
+</style>
+</head>
+<body>
+<main>
+  <p class="idiomas" id="idiomas"><b>Español</b> · <a href="#" id="en">English</a></p>
+  <div class="chapa">🍺</div>
+  <h1 id="titulo">Un colega te invita a Chapas</h1>
+  <p class="flojo" id="sub">El álbum de cromos de la cerveza: cada birra que pruebas es una chapa. Con este código veréis qué os estáis tomando.</p>
+
+  <div class="caja" style="text-align:center">
+    <p class="flojo" id="etiqueta" style="margin:0">Su código de colega</p>
+    <div class="codigo" id="codigo">······</div>
+  </div>
+
+  <p><a class="boton" id="abrir" href="#">Abrir en Chapas</a></p>
+  <p class="flojo" id="sinapp">¿No tienes Chapas? Es gratis y solo para mayores de edad:
+    <a href="https://apps.apple.com/app/id6826702573">descárgala en el App Store</a>, entra con tu correo y pega el código en «Colegas».</p>
+
+  <ol class="pasos" id="pasos">
+    <li>Instala Chapas y entra con tu correo (pestaña <b>Cuenta</b>).</li>
+    <li>Toca <b>Tus colegas y tu código</b> y escribe el código de arriba.</li>
+    <li>Cuando tu colega acepte, lo que publiquéis se ve en <b>La ronda</b> durante 24 horas.</li>
+  </ol>
+
+  <footer>
+    Chapas · <a href="privacidad.html" id="fpriv">Privacidad</a> · <a href="normas.html" id="fnorm">Normas de la ronda</a>
+  </footer>
+</main>
+<script>
+  // Solo lee el código de la URL y lo pinta; no llama a ningún servidor.
+  var c = (new URLSearchParams(location.search).get("c") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6);
+  if (c) {
+    document.getElementById("codigo").textContent = c;
+    document.getElementById("abrir").href = "chapas://colega/" + c;
+  } else {
+    document.getElementById("abrir").style.display = "none";
+  }
+  var EN = {
+    titulo: "A mate is inviting you to Chapas",
+    sub: "The sticker album for beer: every beer you try becomes a bottle cap. With this code you'll see what each other is drinking.",
+    etiqueta: "Their mate code", abrir: "Open in Chapas",
+    sinapp: 'Don’t have Chapas? It’s free and for adults only: <a href="https://apps.apple.com/gb/app/id6826702573">get it on the App Store</a>, sign in with your email and paste the code under “Mates”.',
+    pasos: "<li>Install Chapas and sign in with your email (<b>Account</b> tab).</li><li>Tap <b>Your mates and your code</b> and type the code above.</li><li>Once your mate accepts, what you post shows on <b>The round</b> for 24 hours.</li>",
+    fpriv: "Privacy", fnorm: "Rules of the round"
+  };
+  function ingles() {
+    document.documentElement.lang = "en";
+    for (var k in EN) { var el = document.getElementById(k); if (!el) continue; if (k === "sinapp" || k === "pasos") el.innerHTML = EN[k]; else el.textContent = EN[k]; }
+    document.getElementById("fpriv").href = "en/privacy.html";
+    document.getElementById("fnorm").href = "en/rules.html";
+    document.getElementById("idiomas").innerHTML = '<a href="?c=' + c + '">Español</a> · <b>English</b>';
+  }
+  document.getElementById("en").addEventListener("click", function (e) { e.preventDefault(); ingles(); });
+  if (/^en\b/i.test(navigator.language || "") && !/[?&]es\b/.test(location.search)) ingles();
+</script>
+</body>
+</html>
