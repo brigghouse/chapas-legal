@@ -43,6 +43,11 @@
   if (c) {
     document.getElementById("codigo").textContent = c;
     document.getElementById("abrir").href = "chapas://colega/" + c;
+    // En un iPhone con Chapas instalada, intentar abrirla directamente; si
+    // no está, Safari no hace nada y la página sigue ahí con el código.
+    if (/iPhone|iPad/.test(navigator.platform + navigator.appVersion)) {
+      setTimeout(function () { location.href = "chapas://colega/" + c; }, 400);
+    }
   } else {
     document.getElementById("abrir").style.display = "none";
   }
